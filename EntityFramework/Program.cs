@@ -7,7 +7,7 @@ namespace EntityFramework
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            // Section 1 Completed
+            // 4. and 5. Introduction & What is Entity Framework
         }
     }
 }
