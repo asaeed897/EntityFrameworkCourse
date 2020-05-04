@@ -7,6 +7,7 @@ namespace EntityFramework
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            // Section 1 Completed
         }
     }
 }
