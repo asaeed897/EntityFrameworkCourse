@@ -7,7 +7,12 @@ namespace EntityFramework
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            // 4. and 5. Introduction & What is Entity Framework
+            // 6. Workflows
+
+            // There are 3 types of workflows in Entity framework
+            // Database First
+            // Code First 
+            // Model First 
         }
     }
 }
