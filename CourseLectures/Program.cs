@@ -23,7 +23,7 @@ namespace CourseLectures
         static void Main(string[] args)
         {
             
-            // 9. Code-First Vs Database-First Workflow
+            // 10. Summary
 
             // 
         }
