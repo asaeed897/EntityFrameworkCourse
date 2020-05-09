@@ -12,7 +12,7 @@ namespace CourseLectures
         static void Main(string[] args)
         {
             
-            // 11 and 12. Introduction &  Setting Up the Database
+            // 13. A Quick Tour of EDMX Designer
 
             // 
         }
