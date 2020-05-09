@@ -23,10 +23,9 @@ namespace CourseLectures
         static void Main(string[] args)
         {
             
-            // 8. Code-First Workflow
+            // 9. Code-First Vs Database-First Workflow
 
-            // Resolved that issue that is because of older version of my windows powershell. I update my windows Powershell
-            // and its work.
+            // 
         }
     }
 }
