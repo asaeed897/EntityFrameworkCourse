@@ -1,26 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CourseLectures
 {
+    public class Post
+    {
+        public int Id { get; set; }
+        public DateTime DatePublished { get; set; }
+        public string Title { get; set; }
+        public string Body { get; set; }
+    }
+    public class BlogDbContext : DbContext
+    {
+        public DbSet<Post> Posts { get; set; }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            var context = new DatabaseFisrtDemoEntities1();
-            var post = new C0001_Post_Table()
-            {
-                Body = "Body",
-                DataPublished = DateTime.Now,
-                Title = "Title",
-                PostID = 1
-            };
-            context.C0001_Post_Table.Add(post);
-            context.SaveChanges();
-            // 7. Database-First Workflow
+            
+            // 8. Code-First Workflow
+            // Have Error when I typed add-migration
+            // it shows 'ScriptHalted'
         }
     }
 }
