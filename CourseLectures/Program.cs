@@ -24,8 +24,9 @@ namespace CourseLectures
         {
             
             // 8. Code-First Workflow
-            // Have Error when I typed add-migration
-            // it shows 'ScriptHalted'
+
+            // Resolved that issue that is because of older version of my windows powershell. I update my windows Powershell
+            // and its work.
         }
     }
 }
