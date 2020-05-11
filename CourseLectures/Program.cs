@@ -14,14 +14,15 @@ namespace CourseLectures
            
             var dbContext = new PlutoDbContext();
             var courses = dbContext.GetCourses();
-
+            
             foreach (var course in courses)
             {
                 Console.WriteLine(course.Title);
             }
-            // 17. Importing Stored Procedures
+            // 18. Function Imports
 
-            // 
+            // Complex data types : Entity Frame use these to return data from database
+            // It become useful when we have to retrieve data from multiple tables or we want a subset of a data from large table
         }
     }
 }
