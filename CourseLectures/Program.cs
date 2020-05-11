@@ -12,7 +12,7 @@ namespace CourseLectures
         static void Main(string[] args)
         {
             
-            // 14. Uncovering the EDMX
+            // 15. Connection String
 
             // 
         }
