@@ -12,9 +12,11 @@ namespace CourseLectures
         static void Main(string[] args)
         {
             
-            // 15. Connection String
+            // 16. Dealing with Database Changes
 
-            // 
+            // Adding a New Table
+            // Updating a Table
+            // Deleting a Table
         }
     }
 }
