@@ -11,12 +11,17 @@ namespace CourseLectures
     {
         static void Main(string[] args)
         {
-            
-            // 16. Dealing with Database Changes
+           
+            var dbContext = new PlutoDbContext();
+            var courses = dbContext.GetCourses();
 
-            // Adding a New Table
-            // Updating a Table
-            // Deleting a Table
+            foreach (var course in courses)
+            {
+                Console.WriteLine(course.Title);
+            }
+            // 17. Importing Stored Procedures
+
+            // 
         }
     }
 }
