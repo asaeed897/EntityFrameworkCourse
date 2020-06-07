@@ -20,10 +20,9 @@ namespace CourseLectures
 
             var course = new Course();
             course.Level = Level.Beginner; // 1
-            // 19. Working with Enums
+            // 20 and 21 . Exercise & Summary
 
-            // We can create Enum in data model or in any other place in project but then we have to
-            // reference it.
+            // 
         }
     }
 }
