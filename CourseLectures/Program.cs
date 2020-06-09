@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace CourseLectures
 {
-
     class Program
     {
         static void Main(string[] args)
         {
 
-           // 25 Migrations: Enabling Migrations
+           // 26 Migrations: Adding a New Class
 
             // 
         }
