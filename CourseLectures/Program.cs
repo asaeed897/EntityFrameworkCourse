@@ -12,7 +12,7 @@ namespace CourseLectures
         static void Main(string[] args)
         {
 
-           // 38 Fluent API Basics
+           // 39 Fluent API Relationships
 
              
         }
