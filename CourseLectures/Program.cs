@@ -12,9 +12,9 @@ namespace CourseLectures
         static void Main(string[] args)
         {
 
-           // 31 Migrations: Seeding Database
+           // 32 Summary
 
-            // Always do this in your latest version of source code
+            
         }
     }
 }
