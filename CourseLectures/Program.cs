@@ -13,28 +13,23 @@ namespace CourseLectures
         {
             var context = new PlutoContext();
 
-            // LINQ Extension Methods which are not supported by LINQ Syntax
-            
-            // Partitioning
-            var courses = context.Courses.Skip(10).Take(10);
+            var courses = context.Courses
+                .ToList().Where(c => c.IsBeginnerCourse == true)
+                .OrderBy(c => c.Name);
 
-            // Element Operators
-            context.Courses.OrderBy(c => c.Level)
-                .FirstOrDefault( c => c.FullPrice > 100); // Last method not supported in Sql
+            foreach (var c in courses)
+            {
+                Console.WriteLine(c.Name);
+            }
 
-            context.Courses.SingleOrDefault(c => c.Id == 1);
+            // 51 Deferred Execution
 
-            // Quantifying 
-            var allAbove10Dollars = context.Courses.All(c => c.FullPrice > 10;
-            var anyCourseInLevel1 = context.Courses.Any(c => c.Level == 1);
-            
-            // Aggregating
-            var count = context.Courses.Where( c => c.Level == 1).Count();
-            context.Courses.Max(c => c.FullPrice);
-            context.Courses.Min(c => c.FullPrice);
-            context.Courses.Average(c => c.FullPrice);
+            // Queries are not executed at the time you create them.
 
-            // 50 LINQ Extension Methods Additional Methods
+            // Query executed when
+            // Iterating over it
+            // Calling ToList, ToArray, ToDictionary
+            // or Calling First, Last, Single, Count, Max, Min, Average
 
         }
     }

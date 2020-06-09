@@ -30,6 +30,11 @@ namespace CourseLectures
         public virtual Author Author { get; set; }
         public Cover Cover { get; set; }
 
+        public bool IsBeginnerCourse
+        {
+            get { return Level == 1; }
+        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tag> Tags { get; set; }
     }
