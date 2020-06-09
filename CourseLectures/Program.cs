@@ -13,63 +13,61 @@ namespace CourseLectures
         {
             var context = new PlutoContext();
 
-            // LINQ Syntax
-            var query =
-                from c in context.Courses
-                where c.Author.Id == 1
-                orderby c.Level descending , c.Name
-                select new { Name= c.Name, Author = c.Author};
+            // LINQ Extension Methods
             
-            foreach (var course in query)
+            var tags = context.Courses
+                .Where(c => c.Level == 1) // Restriction
+                .OrderByDescending( c=> c.Name) // Ordering 
+                .ThenByDescending( c=> c.Level)
+                .SelectMany( c=> c.Tags) // Projection
+                .Distinct(); // Set Operations
+
+            foreach (var t in tags)
             {
-                Console.WriteLine(course.Name);
+                Console.WriteLine(t.Name);
             }
 
-            // Grouping
-            var query2 =
-                from c in context.Courses
-                group c by c.Level
-                into g
-                select g;
+            // Grouping 
+            var groups = context.Courses.GroupBy(c => c.Level);
 
-            foreach (var group in query2)
+            foreach (var group in groups)
             {
-                Console.WriteLine( "{0} ({1})", group.Key, group.Count());
-
+                Console.WriteLine("Key: " + group.Key);
+                foreach (var course in group)
+                {
+                    Console.WriteLine("\t" +course.Name);
+                }
             }
 
-            // Joining    1: Inner Join   2: Group Join   3: Cross Join
-            var query3 =  
-                from c in context.Courses
-                // So we can use Inner join like this when we don't have navigation property 
-                join a in context.Authors on c.AuthorId equals a.Id
-                select new {CourseName = c.Name, AuthorName = a.Name};
+            // Joining 
+            context.Courses.Join(context.Authors, // Inner Join
+                c => c.AuthorId,
+                a => a.Id,
+                (course, author) => new
+                    {
+                        CourseName = course.Name,
+                        AuthorName = author.Name
+                    });
 
-            var query4 = // group join example
-                from a in context.Authors
-                join c in context.Courses on a.Id equals c.AuthorId into g
-                select new {AuthorName = a.Name, Courses = g.Count()};
+            context.Authors.GroupJoin(context.Courses, // Group Join
+                a => a.Id,
+                c => c.AuthorId,
+                (author, courses) => new
+                    {
+                        Author = author.Name,
+                        Courses = courses.Count()
+                    });
 
-            foreach (var x in query4)
-            {
-                Console.WriteLine("{0}  ({1})", x.AuthorName, x.Courses);
-            }
+            context.Authors.SelectMany(a => context.Courses, // Cross Join
+                (author, course) => new
+                {
+                    AuthorName = author.Name,
+                    CourseName = course.Name
+                });
 
-            var query5 = // Cross Join Example
-                from a in context.Authors
-                from c in context.Courses
-                select new {AuthorName = a.Name, CourseName = c.Name};
+            // 49 LINQ Extension Methods
 
-            foreach (var x in query5)
-            {
-                Console.WriteLine("{0}  ({1})", x.AuthorName, x.CourseName);
-
-            }
-
-            // 48 LINQ Syntax
-
-            // LINQ is usually used for simple and short queries 
-            // but when we have complex queries then we have to write sql queries or stored procedures
+            // 
         }
     }
 }
