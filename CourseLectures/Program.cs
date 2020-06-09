@@ -20,7 +20,7 @@ namespace CourseLectures
 
             var course = new Course();
             course.Level = Level.Beginner; // 1
-            // 20 and 21 . Exercise & Summary
+            // 22 Introduction
 
             // 
         }
