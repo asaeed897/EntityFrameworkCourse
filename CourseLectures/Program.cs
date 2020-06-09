@@ -12,9 +12,10 @@ namespace CourseLectures
         static void Main(string[] args)
         {
 
-           // 39 Fluent API Relationships
+           // 40 Demo Fluent API
 
-             
+           // Note: In this demo I only created migration but didn't update table
+
         }
     }
 }

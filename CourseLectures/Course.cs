@@ -17,12 +17,8 @@ namespace CourseLectures
 
         public int Id { get; set; }
 
-        [Required]
-        [MaxLength(255)]
         public string Name { get; set; }
 
-        [Required]
-        [MaxLength(2000)]
         public string Description { get; set; }
 
         public byte Level { get; set; }
@@ -32,6 +28,7 @@ namespace CourseLectures
         public int? Author_Id { get; set; }
 
         public virtual Author Author { get; set; }
+        public Cover Cover { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tag> Tags { get; set; }

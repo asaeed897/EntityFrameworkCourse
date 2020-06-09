@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Author.cs" />
     <Compile Include="Course.cs" />
+    <Compile Include="Cover.cs" />
     <Compile Include="Migrations\202006090846071_InitialModel.cs" />
     <Compile Include="Migrations\202006090846071_InitialModel.designer.cs">
       <DependentUpon>202006090846071_InitialModel.cs</DependentUpon>
@@ -93,9 +94,9 @@
     <Compile Include="Migrations\202006091057419_PopulateCategoriesTable.designer.cs">
       <DependentUpon>202006091057419_PopulateCategoriesTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202006091447531_AddAnnotationsToCourseTable.cs" />
-    <Compile Include="Migrations\202006091447531_AddAnnotationsToCourseTable.designer.cs">
-      <DependentUpon>202006091447531_AddAnnotationsToCourseTable.cs</DependentUpon>
+    <Compile Include="Migrations\202006091534440_AddFluentAPIToCourseTable.cs" />
+    <Compile Include="Migrations\202006091534440_AddFluentAPIToCourseTable.designer.cs">
+      <DependentUpon>202006091534440_AddFluentAPIToCourseTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
@@ -138,8 +139,8 @@
     <EmbeddedResource Include="Migrations\202006091057419_PopulateCategoriesTable.resx">
       <DependentUpon>202006091057419_PopulateCategoriesTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006091447531_AddAnnotationsToCourseTable.resx">
-      <DependentUpon>202006091447531_AddAnnotationsToCourseTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006091534440_AddFluentAPIToCourseTable.resx">
+      <DependentUpon>202006091534440_AddFluentAPIToCourseTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

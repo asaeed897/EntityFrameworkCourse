@@ -7,13 +7,13 @@ namespace CourseLectures.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class AddAnnotationsToCourseTable : IMigrationMetadata
+    public sealed partial class AddFluentAPIToCourseTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddAnnotationsToCourseTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddFluentAPIToCourseTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006091447531_AddAnnotationsToCourseTable"; }
+            get { return "202006091534440_AddFluentAPIToCourseTable"; }
         }
         
         string IMigrationMetadata.Source
