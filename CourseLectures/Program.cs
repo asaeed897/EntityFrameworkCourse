@@ -13,24 +13,14 @@ namespace CourseLectures
         {
             var context = new PlutoContext();
 
-            var courses = context.Courses
-                .ToList().Where(c => c.IsBeginnerCourse == true)
-                .OrderBy(c => c.Name);
+            
 
-            foreach (var c in courses)
-            {
-                Console.WriteLine(c.Name);
-            }
+            // 52 IQueryable Explained
 
-            // 51 Deferred Execution
-
-            // Queries are not executed at the time you create them.
-
-            // Query executed when
-            // Iterating over it
-            // Calling ToList, ToArray, ToDictionary
-            // or Calling First, Last, Single, Count, Max, Min, Average
-
+            // IEnumerable are those types over we can use foreach loop: string, array, list, dictionary
+            // IQueryable derived from IEnumerable
+            // IQueryable has expression objects in arguments which allow us to chain our queries
+            // and it execute them when we iterate 
         }
     }
 }
