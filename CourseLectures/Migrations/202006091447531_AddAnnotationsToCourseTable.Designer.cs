@@ -7,13 +7,13 @@ namespace CourseLectures.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class foo : IMigrationMetadata
+    public sealed partial class AddAnnotationsToCourseTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(foo));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddAnnotationsToCourseTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006091402456_foo"; }
+            get { return "202006091447531_AddAnnotationsToCourseTable"; }
         }
         
         string IMigrationMetadata.Source

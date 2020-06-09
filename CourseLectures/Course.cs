@@ -17,9 +17,12 @@ namespace CourseLectures
 
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(255)]
         public string Name { get; set; }
 
-        [Required] // Data Annotations
+        [Required]
+        [MaxLength(2000)]
         public string Description { get; set; }
 
         public byte Level { get; set; }

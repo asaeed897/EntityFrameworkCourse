@@ -93,9 +93,9 @@
     <Compile Include="Migrations\202006091057419_PopulateCategoriesTable.designer.cs">
       <DependentUpon>202006091057419_PopulateCategoriesTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202006091402456_foo.cs" />
-    <Compile Include="Migrations\202006091402456_foo.designer.cs">
-      <DependentUpon>202006091402456_foo.cs</DependentUpon>
+    <Compile Include="Migrations\202006091447531_AddAnnotationsToCourseTable.cs" />
+    <Compile Include="Migrations\202006091447531_AddAnnotationsToCourseTable.designer.cs">
+      <DependentUpon>202006091447531_AddAnnotationsToCourseTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
@@ -138,8 +138,8 @@
     <EmbeddedResource Include="Migrations\202006091057419_PopulateCategoriesTable.resx">
       <DependentUpon>202006091057419_PopulateCategoriesTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006091402456_foo.resx">
-      <DependentUpon>202006091402456_foo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006091447531_AddAnnotationsToCourseTable.resx">
+      <DependentUpon>202006091447531_AddAnnotationsToCourseTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
