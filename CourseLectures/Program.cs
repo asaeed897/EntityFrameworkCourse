@@ -13,7 +13,7 @@ namespace CourseLectures
         static void Main(string[] args)
         {
 
-           // 24 Code First with an Existing Database
+           // 25 Migrations: Enabling Migrations
 
             // 
         }
