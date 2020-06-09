@@ -11,7 +11,7 @@ namespace CourseLectures
     {
         static void Main(string[] args)
         {
-            // 45 Introduction Section 6
+            // 46 Introduction to LINQ
         }
     }
 }
