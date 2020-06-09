@@ -12,9 +12,9 @@ namespace CourseLectures
         static void Main(string[] args)
         {
 
-           // 29 Migrations: Recovering from Mistakes
+           // 30 Migrations: Downgrading a Database
 
-            // 
+            // Always do this in your latest version of source code
         }
     }
 }
