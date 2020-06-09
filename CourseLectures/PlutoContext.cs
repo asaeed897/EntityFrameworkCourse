@@ -18,8 +18,7 @@ namespace CourseLectures
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-           
-
+            
             modelBuilder.Entity<Author>()
                 .HasMany(e => e.Courses)
                 .WithOptional(e => e.Author)

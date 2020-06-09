@@ -12,10 +12,7 @@ namespace CourseLectures
         static void Main(string[] args)
         {
 
-           // 36 & 37 Data Annotations and Its Demo
-
-           // Tip Prefer Fluent API
-           // Don't mix Data Annotations with Fluent API
+           // 38 Fluent API Basics
 
              
         }
