@@ -12,10 +12,7 @@ namespace CourseLectures
         static void Main(string[] args)
         {
 
-           // 41 Demo Fluent API ( Advance Configurations )
-
-           // Note: In this demo I only created migration but didn't update table
-
+           // 42 Organizing Fluent API Configurations
         }
     }
 }
