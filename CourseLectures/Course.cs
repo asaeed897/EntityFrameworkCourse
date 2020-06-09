@@ -19,7 +19,6 @@ namespace CourseLectures
 
         public string Name { get; set; }
 
-        public Category Category { get; set; }
         public string Description { get; set; }
 
         public byte Level { get; set; }

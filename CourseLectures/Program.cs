@@ -12,7 +12,7 @@ namespace CourseLectures
         static void Main(string[] args)
         {
 
-           // 27 Migrations: Modifying an Existing Class
+           // 28 Migrations: Deleting an Existing Class
 
             // 
         }
