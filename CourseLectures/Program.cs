@@ -13,61 +13,29 @@ namespace CourseLectures
         {
             var context = new PlutoContext();
 
-            // LINQ Extension Methods
+            // LINQ Extension Methods which are not supported by LINQ Syntax
             
-            var tags = context.Courses
-                .Where(c => c.Level == 1) // Restriction
-                .OrderByDescending( c=> c.Name) // Ordering 
-                .ThenByDescending( c=> c.Level)
-                .SelectMany( c=> c.Tags) // Projection
-                .Distinct(); // Set Operations
+            // Partitioning
+            var courses = context.Courses.Skip(10).Take(10);
 
-            foreach (var t in tags)
-            {
-                Console.WriteLine(t.Name);
-            }
+            // Element Operators
+            context.Courses.OrderBy(c => c.Level)
+                .FirstOrDefault( c => c.FullPrice > 100); // Last method not supported in Sql
 
-            // Grouping 
-            var groups = context.Courses.GroupBy(c => c.Level);
+            context.Courses.SingleOrDefault(c => c.Id == 1);
 
-            foreach (var group in groups)
-            {
-                Console.WriteLine("Key: " + group.Key);
-                foreach (var course in group)
-                {
-                    Console.WriteLine("\t" +course.Name);
-                }
-            }
+            // Quantifying 
+            var allAbove10Dollars = context.Courses.All(c => c.FullPrice > 10;
+            var anyCourseInLevel1 = context.Courses.Any(c => c.Level == 1);
+            
+            // Aggregating
+            var count = context.Courses.Where( c => c.Level == 1).Count();
+            context.Courses.Max(c => c.FullPrice);
+            context.Courses.Min(c => c.FullPrice);
+            context.Courses.Average(c => c.FullPrice);
 
-            // Joining 
-            context.Courses.Join(context.Authors, // Inner Join
-                c => c.AuthorId,
-                a => a.Id,
-                (course, author) => new
-                    {
-                        CourseName = course.Name,
-                        AuthorName = author.Name
-                    });
+            // 50 LINQ Extension Methods Additional Methods
 
-            context.Authors.GroupJoin(context.Courses, // Group Join
-                a => a.Id,
-                c => c.AuthorId,
-                (author, courses) => new
-                    {
-                        Author = author.Name,
-                        Courses = courses.Count()
-                    });
-
-            context.Authors.SelectMany(a => context.Courses, // Cross Join
-                (author, course) => new
-                {
-                    AuthorName = author.Name,
-                    CourseName = course.Name
-                });
-
-            // 49 LINQ Extension Methods
-
-            // 
         }
     }
 }
