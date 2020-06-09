@@ -36,11 +36,16 @@ namespace CourseLectures
             modelBuilder.Entity<Course>()
                 .HasMany(c => c.Tags)
                 .WithMany(t => t.Courses)
-                .Map(m => m.ToTable("CourseTags"));
+                .Map(m =>
+                {
+                    m.ToTable("CourseTags");
+                    m.MapLeftKey("CourseId");
+                    m.MapRightKey("TagId");
+                });
 
             modelBuilder.Entity<Course>()
                 .HasRequired(c => c.Cover)
-                .WithRequiredPrincipal(c => c.Course);
+                .WithRequiredPrincipal(c => c.Course); 
 
             modelBuilder.Entity<Author>()
                 .HasMany(e => e.Courses)
