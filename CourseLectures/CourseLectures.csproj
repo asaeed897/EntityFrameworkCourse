@@ -99,6 +99,14 @@
     <Compile Include="Migrations\202006091534440_AddFluentAPIToCourseTable.designer.cs">
       <DependentUpon>202006091534440_AddFluentAPIToCourseTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006091748475_DeleteAuthor_IdColumnFromCoursesTable.cs" />
+    <Compile Include="Migrations\202006091748475_DeleteAuthor_IdColumnFromCoursesTable.designer.cs">
+      <DependentUpon>202006091748475_DeleteAuthor_IdColumnFromCoursesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006091754107_PopulateAllTables.cs" />
+    <Compile Include="Migrations\202006091754107_PopulateAllTables.designer.cs">
+      <DependentUpon>202006091754107_PopulateAllTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
     <Compile Include="Program.cs" />
@@ -142,6 +150,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006091534440_AddFluentAPIToCourseTable.resx">
       <DependentUpon>202006091534440_AddFluentAPIToCourseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006091748475_DeleteAuthor_IdColumnFromCoursesTable.resx">
+      <DependentUpon>202006091748475_DeleteAuthor_IdColumnFromCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006091754107_PopulateAllTables.resx">
+      <DependentUpon>202006091754107_PopulateAllTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

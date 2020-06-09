@@ -25,8 +25,6 @@ namespace CourseLectures
 
         public float FullPrice { get; set; }
 
-        public int? Author_Id { get; set; }
-
         public int AuthorId { get; set; }
 
         public virtual Author Author { get; set; }

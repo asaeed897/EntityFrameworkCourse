@@ -14,10 +14,10 @@ namespace CourseLectures.EntityConfigurations
             // Configuration Convention
 
             // Table Override
-            ToTable("tbl_Course");
+           // ToTable("tbl_Course");
 
             // Primary Key
-            HasKey(c => c.Id);
+          //  HasKey(c => c.Id);
 
             // Property
             Property(c => c.Description)
