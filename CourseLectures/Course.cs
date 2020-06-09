@@ -19,6 +19,7 @@ namespace CourseLectures
 
         public string Name { get; set; }
 
+        [Required] // Data Annotations
         public string Description { get; set; }
 
         public byte Level { get; set; }

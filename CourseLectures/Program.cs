@@ -12,7 +12,11 @@ namespace CourseLectures
         static void Main(string[] args)
         {
 
-           // 34 Introduction Section 5
+           // 35 Overriding Conventions
+
+           // Data Annotations : We use this usually for small Applications
+
+           // Fluent API: And this for Enterprise level Application
 
              
         }
