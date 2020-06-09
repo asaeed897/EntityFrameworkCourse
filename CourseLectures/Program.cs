@@ -15,12 +15,9 @@ namespace CourseLectures
 
             
 
-            // 52 IQueryable Explained
+            // 54 Summary
 
-            // IEnumerable are those types over we can use foreach loop: string, array, list, dictionary
-            // IQueryable derived from IEnumerable
-            // IQueryable has expression objects in arguments which allow us to chain our queries
-            // and it execute them when we iterate 
+            // Preferred Extension Method
         }
     }
 }
