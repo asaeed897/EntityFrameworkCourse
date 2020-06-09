@@ -12,7 +12,7 @@ namespace CourseLectures
         static void Main(string[] args)
         {
 
-           // 30 Migrations: Downgrading a Database
+           // 31 Migrations: Seeding Database
 
             // Always do this in your latest version of source code
         }
