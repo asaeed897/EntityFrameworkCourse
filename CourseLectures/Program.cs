@@ -13,20 +13,27 @@ namespace CourseLectures
         {
             var context = new PlutoContext();
 
-            // Cascade Delete
-            // var course = context.Courses.Find(4); // Single(c => c.Id == 4)
-            // context.Courses.Remove(course);
+            // Add an Object
+            context.Authors.Add(new Author() {Name = "New Author"});
 
-            // Without Cascade Delete
-            var author = context.Authors.Include(a => a.Courses).Single(a => a.Id == 2);
-            context.Courses.RemoveRange(author.Courses);
-            context.Authors.Remove(author);
+            // Update an object
+            var author = context.Authors.Find(7);
+            author.Name = "Updated";
 
-            context.SaveChanges();
-            // 66. Removing Objects
+            // Removing an Object
+            var another = context.Authors.Find(7);
+            context.Authors.Remove(another);
 
-            // Prefer logical deletes to Physical deletes.
-            // author.IsDeleted = true; for logical delete and false for undo
+            var entries = context.ChangeTracker.Entries();
+
+            foreach (var entry in entries)
+            {
+               // entry.Reload(); // Useful method 
+
+                Console.WriteLine(entry.State);
+            }
+
+            // 67. Working with Change Tracker
 
         } 
     }
