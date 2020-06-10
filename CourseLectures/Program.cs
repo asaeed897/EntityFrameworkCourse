@@ -13,28 +13,10 @@ namespace CourseLectures
         {
             var context = new PlutoContext();
 
-            // Add an Object
-            context.Authors.Add(new Author() {Name = "New Author"});
+            // 68. LINQPad
+            // Installed LINQPad
 
-            // Update an object
-            var author = context.Authors.Find(7);
-            author.Name = "Updated";
-
-            // Removing an Object
-            var another = context.Authors.Find(7);
-            context.Authors.Remove(another);
-
-            var entries = context.ChangeTracker.Entries();
-
-            foreach (var entry in entries)
-            {
-               // entry.Reload(); // Useful method 
-
-                Console.WriteLine(entry.State);
-            }
-
-            // 67. Working with Change Tracker
-
+            // We can use to simply check my outputs quickly.
         } 
     }
 }
