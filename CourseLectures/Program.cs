@@ -11,13 +11,8 @@ namespace CourseLectures
     {
         static void Main(string[] args)
         {
-            var context = new PlutoContext();
 
-            
-
-            // 54 Summary
-
-            // Preferred Extension Method
+            // 56. Introduction
         }
     }
 }
