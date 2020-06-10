@@ -12,14 +12,30 @@ namespace CourseLectures
         static void Main(string[] args)
         {
             var context = new PlutoContext();
+            
+            // Two Approaches are common for adding object
 
-            // 63. Overview of Changing Data
+            // 1. Using an existing object in context
+            var authors = context.Authors.ToList();
+            var author = context.Authors.Single(a => a.Id == 2);
 
-            // Change Tracker 
-            // Responsible for keeping track of the state of objects in DbContext
+            // there is 3rd approach also
+            context.Authors.Attach(author); // but its not recommended
 
-            // There are three states
-            // Added, Modified, Deleted
+            var course = new Course
+            {
+                Name = "New Course 2",
+                Description = "New Description",
+                FullPrice = 19.95f,
+                Level = 1,
+                Author = author
+               // , AuthorId = 1 // 2. Using foreign key properties
+            };
+
+            context.Courses.Add(course);
+
+            context.SaveChanges();
+            // 64. Adding Objects
 
         } 
     }
