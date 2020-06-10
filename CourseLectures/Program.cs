@@ -13,8 +13,7 @@ namespace CourseLectures
         static void Main(string[] args)
         {
             
-
-            // 76. WPF Example
+            // 77. Summary
 
         }
     }
