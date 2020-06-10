@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.ModelConfiguration;
+using CourseLectures.Core.Domain;
 
-namespace CourseLectures.EntityConfigurations
+namespace CourseLectures.Persistence.EntityConfigurations
 {
     public class CourseConfiguration : EntityTypeConfiguration<Course>
     {

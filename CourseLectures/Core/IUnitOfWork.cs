@@ -1,6 +1,7 @@
 ﻿using System;
+using CourseLectures.Core.Repositories;
 
-namespace CourseLectures
+namespace CourseLectures.Core
 {
     public interface IUnitOfWork : IDisposable
     {

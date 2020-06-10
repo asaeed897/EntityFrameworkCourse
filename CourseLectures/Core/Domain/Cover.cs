@@ -1,4 +1,4 @@
-﻿namespace CourseLectures
+﻿namespace CourseLectures.Core.Domain
 {
     public class Cover
     {

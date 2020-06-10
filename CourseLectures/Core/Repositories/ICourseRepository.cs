@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using CourseLectures.Core.Domain;
 
-namespace CourseLectures
+namespace CourseLectures.Core.Repositories
 {
     public interface ICourseRepository : IRepository<Course>
     {

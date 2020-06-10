@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CourseLectures.Repositories;
+using CourseLectures.Persistence;
 
 namespace CourseLectures
 {
@@ -27,10 +27,7 @@ namespace CourseLectures
                 unitOfWork.Complete();
             }
 
-
-
-
-            // 73. Implementing Repository Pattern
+            // 74. Structuring Your Application
         } 
     }
 }

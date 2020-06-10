@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using CourseLectures.Core.Domain;
+using CourseLectures.Core.Repositories;
 
-namespace CourseLectures.Repositories
+namespace CourseLectures.Persistence.Repositories
 {
     public class CourseRepository : Repository<Course>, ICourseRepository
     {

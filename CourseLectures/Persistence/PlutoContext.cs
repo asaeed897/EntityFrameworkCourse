@@ -1,13 +1,9 @@
-using System.Data.Entity.ModelConfiguration;
-using CourseLectures.EntityConfigurations;
+using System.Data.Entity;
+using CourseLectures.Core.Domain;
+using CourseLectures.Persistence.EntityConfigurations;
 
-namespace CourseLectures
+namespace CourseLectures.Persistence
 {
-    using System;
-    using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-
     public partial class PlutoContext : DbContext
     {
         public PlutoContext()

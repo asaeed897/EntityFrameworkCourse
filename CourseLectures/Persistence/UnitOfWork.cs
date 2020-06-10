@@ -1,4 +1,8 @@
-﻿namespace CourseLectures.Repositories
+﻿using CourseLectures.Core;
+using CourseLectures.Core.Repositories;
+using CourseLectures.Persistence.Repositories;
+
+namespace CourseLectures.Persistence
 {
     public class UnitOfWork : IUnitOfWork
     {

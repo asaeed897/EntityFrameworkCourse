@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using CourseLectures.Core.Domain;
+using CourseLectures.Persistence;
 
 namespace CourseLectures.Migrations
 {
@@ -8,14 +10,14 @@ namespace CourseLectures.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CourseLectures.PlutoContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<PlutoContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(CourseLectures.PlutoContext context)
+        protected override void Seed(PlutoContext context)
         {
             //     #region Add Tags
             var tags = new Dictionary<string, Tag>
