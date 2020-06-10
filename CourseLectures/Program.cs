@@ -13,10 +13,7 @@ namespace CourseLectures
         {
             var context = new PlutoContext();
 
-            // 68. LINQPad
-            // Installed LINQPad
-
-            // We can use to simply check my outputs quickly.
+            // 70. Summary
         } 
     }
 }
