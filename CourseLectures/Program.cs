@@ -13,24 +13,33 @@ namespace CourseLectures
         {
             var context = new PlutoContext();
 
-            var courses = context.Courses.Include(c => c.Author).ToList();
-              
-            foreach (var course in courses)
+            var author = context.Authors.Single(a=> a.Id== 5);
+
+            // MSDN way
+            context.Entry(author).Collection(a=> a.Courses).Load();  
+            // bad thing is that we can use it with single elements like author
+            // we can't use this with list of authors
+
+            // Mosh way
+            context.Courses.Where(c=> c.AuthorId == author.Id ).Load();    
+
+            foreach (var course in author.Courses)
             {
-                Console.WriteLine("{0} by {1}", course.Name, course.Author.Name);
+                Console.WriteLine("{0}", course.Name);
             }
 
-            // 58 Eager Loading
-            // Its opposite of lazy loading...
+            // In Mosh way we can use list of authors and etc
+            var authors = context.Authors.ToList();
+            var authorIds = authors.Select(a => a.Id);
 
-            // For single properties
-            // context.Courses.Include(c => c.Author.Address);
+            context.Courses.Where(c=> authorIds.Contains(c.AuthorId) && c.FullPrice == 0).Load();
 
-            // For collection properties
-            // context.Courses.Include(a => a.Tags.Select(t => t.Moderator))
+            // 59 Explicit Loading
 
-            // Note: When you use too many include then your query become more and more complex
-            // which is not good practice.
+            // It is same like eager loading but it have separate queries according to load
+            // it also have multiple round-trips to load objects.
+
+
 
         } 
     }
