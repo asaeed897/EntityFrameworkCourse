@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CourseLectures.Repositories;
 
 namespace CourseLectures
 {
@@ -11,17 +12,25 @@ namespace CourseLectures
     {
         static void Main(string[] args)
         {
-            var context = new PlutoContext();
+            using (var unitOfWork = new UnitOfWork(new PlutoContext()))
+            {
+                // Example 1
+                var course = unitOfWork.Courses.Get(1);
 
-            // 72. Repository Pattern
+                // Example 2
+                var courses = unitOfWork.Courses.GetCoursesWithAuthors(1, 4);
 
-            // Mediates between the domain and data mapping layers, acting like an
-            // in-memory collection of domain objects.
+                // Example 3
+                var author = unitOfWork.Authors.GetAuthorWithCourses(5);
+                unitOfWork.Courses.RemoveRange(author.Courses);
+                unitOfWork.Authors.Remove(author);
+                unitOfWork.Complete();
+            }
 
-            // Benefits
 
-            // Minimizes duplicate query logic
-            // Decouples your application from persistence framework
+
+
+            // 73. Implementing Repository Pattern
         } 
     }
 }
