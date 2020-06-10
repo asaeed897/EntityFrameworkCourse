@@ -13,6 +13,7 @@ namespace CourseLectures
         public PlutoContext()
             : base("name=PlutoContext")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<Author> Authors { get; set; }
