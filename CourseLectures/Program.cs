@@ -13,7 +13,13 @@ namespace CourseLectures
         {
             var context = new PlutoContext();
 
-            // 62. Introduction
+            // 63. Overview of Changing Data
+
+            // Change Tracker 
+            // Responsible for keeping track of the state of objects in DbContext
+
+            // There are three states
+            // Added, Modified, Deleted
 
         } 
     }
