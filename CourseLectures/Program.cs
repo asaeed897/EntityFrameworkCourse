@@ -13,7 +13,7 @@ namespace CourseLectures
         {
             var context = new PlutoContext();
 
-            // 70. Summary
+            // 71. Introduction
         } 
     }
 }
